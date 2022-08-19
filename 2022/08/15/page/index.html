@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/tubiao.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/tubiao.jpg">
+  <link rel="icon" href="/img/tubiao.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,17 +16,19 @@
   <meta name="author" content="small yu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="摘要">
+    <meta name="description" content="记录了在我学习opencv中常用的python函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="opencv">
+<meta property="og:title" content="opencv库函数">
 <meta property="og:url" content="http://example.com/2022/08/15/page/index.html">
-<meta property="og:site_name" content="等·春·来">
-<meta property="og:description" content="摘要">
+<meta property="og:site_name" content="未来">
+<meta property="og:description" content="记录了在我学习opencv中常用的python函数">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/opencv.jpg">
 <meta property="article:published_time" content="2022-08-15T14:42:20.000Z">
-<meta property="article:modified_time" content="2022-08-17T09:27:37.438Z">
+<meta property="article:modified_time" content="2022-08-19T08:43:43.689Z">
 <meta property="article:author" content="small yu">
+<meta property="article:tag" content="opencv">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/opencv.jpg">
   
@@ -34,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>opencv - 等·春·来</title>
+  <title>opencv库函数 - 未来</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -72,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -164,9 +166,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
               </a>
             </li>
           
@@ -193,13 +195,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/6.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/preview.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="opencv"></span>
+            <span id="subtitle" data-typed-text="opencv库函数"></span>
           
         </div>
 
@@ -271,6 +273,16 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
 
@@ -279,7 +291,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">opencv</h1>
+            <h1 style="display: none">opencv库函数</h1>
             
             
               <div class="markdown-body">
@@ -346,13 +358,13 @@
 <p>第三个参数：upper指的是图像中高于这个upper的值，图像值变为0</p>
 <p>而在lower～upper之间的值变成255</p>
 <p>可以用阈值的范围来选择颜色</p>
-<p><img src="file:///C:/Users/16246/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/img/page,hsv.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h2 id="cv2-bitwise-and-src1src2-mask-x3D-X"><a href="#cv2-bitwise-and-src1src2-mask-x3D-X" class="headerlink" title="cv2.bitwise_and(src1src2,mask&#x3D;X)"></a>cv2.bitwise_and(src1src2,mask&#x3D;X)</h2><p> src1表示第一个array或scalar类型的输入值。</p>
 <p> src2表示第二个array或scalar类型的输入值。</p>
 <p>X表示可选操作掩码，8位单通道array，选择图像。</p>
-<p>cv2.bitwise_and()是对<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6&spm=1001.2101.3001.7020">二进制</a>数据进行“与”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“与”操作，1&amp;1&#x3D;1，1&amp;0&#x3D;0，0&amp;1&#x3D;0，0&amp;0&#x3D;0</p>
+<p>cv2.bitwise_and()是对二进制数据进行“与”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“与”操作，1&amp;1&#x3D;1，1&amp;0&#x3D;0，0&amp;1&#x3D;0，0&amp;0&#x3D;0</p>
 <h2 id="空间域滤波"><a href="#空间域滤波" class="headerlink" title="空间域滤波"></a>空间域滤波</h2><h2 id="cv2-blur-原始图像-核大小"><a href="#cv2-blur-原始图像-核大小" class="headerlink" title="cv2.blur(原始图像,核大小)"></a>cv2.blur(原始图像,核大小)</h2><p>均值滤波</p>
-<p>指任意一点的像素值，都是周围 <img src="file:///C:/Users/16246/AppData/Local/Temp/msohtmlclip1/01/clip_image003.gif" srcset="/img/loading.gif" lazyload alt="N \times M"> 个像素值的均值</p>
+<p>指任意一点的像素值，都是周围 NxM个像素值的均值</p>
 <p>注：</p>
 <p>1）随着核大小逐渐变大，会让图像变得更加模糊；</p>
 <p>2）如果设置为核大小为（1，1），则结果就是原始图像。</p>
@@ -374,7 +386,7 @@
 <p>*<em>闭运算：</em>***cv2.****morphologyEx(**<strong>src, cv2.<strong><strong>MORPH_CLOSE</strong></strong>, kernel)</strong></p>
 <p># 设置卷积核<br> kernel &#x3D; np.ones((3, 3), np.uint8)<br> ‘’’形态学6种操作’’’<br> # 腐蚀<br> fushi &#x3D; cv2.erode(src, kernel)<br> # 膨胀<br> pengzhang &#x3D; cv2.dilate(src, kernel)<br> # 开运算<br> kai &#x3D; cv2.morphologyEx(src, cv2.MORPH_OPEN, kernel)<br> # 闭运算<br> bi &#x3D; cv2.morphologyEx(src, cv2.MORPH_CLOSE, kernel)<br> # 顶帽运算<br> tophat &#x3D; cv2.morphologyEx(src, cv2.MORPH_TOPHAT, kernel)<br> # 黑帽运算<br> blackhat &#x3D; cv2.morphologyEx(src, cv2.MORPH_BLACKHAT, kernel)</p>
 <p><a target="_blank" rel="noopener" href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html">OpenCV：形态学转化</a></p>
-<p><img src="file:///C:/Users/16246/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/img/page,1.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h2 id="sobel算子"><a href="#sobel算子" class="headerlink" title="sobel算子"></a>sobel算子</h2><p># ddepth：cv2.CV_， 结果图像的位深</p>
 <p># dx：对 x 方向求偏导</p>
 <p># dy：对 y 方向求偏导</p>
@@ -408,13 +420,13 @@
 <p>CHAIN_APPROX_NONE:以Freeman链码的方式输出轮廓，轮廓信息完整保留</p>
 <p>CHAIN_APPROX_SIMPLE:压缩水平的、垂直的和斜的部分，只保留顶点</p>
 <p><strong>函数返回值：contours, hierarchy</strong></p>
-<p># contours：从图像中查找出来的轮廓数组</p>
-<p># hierarchy：轮廓层级</p>
-<h2 id="cv2-drawContours（）"><a href="#cv2-drawContours（）" class="headerlink" title="cv2.drawContours（）"></a>cv2.drawContours（）</h2><p># canvas：轮廓要绘制在哪张背景图上，直接覆盖原图</p>
-<p># contours：findContours 找到的轮廓信息</p>
-<p># contourIdx：轮廓数组contours的索引值，-1 为全部</p>
-<p># color：轮廓颜色</p>
-<p># thickness：轮廓厚度</p>
+<p>contours：从图像中查找出来的轮廓数组</p>
+<p>hierarchy：轮廓层级</p>
+<h2 id="cv2-drawContours（）"><a href="#cv2-drawContours（）" class="headerlink" title="cv2.drawContours（）"></a>cv2.drawContours（）</h2><p>canvas：轮廓要绘制在哪张背景图上，直接覆盖原图</p>
+<p>contours：findContours 找到的轮廓信息</p>
+<p>contourIdx：轮廓数组contours的索引值，-1 为全部</p>
+<p>color：轮廓颜色</p>
+<p>thickness：轮廓厚度</p>
 <p>cv2.drawContours(canva:image, contours, contourIdx, color， thickness) -&gt; image</p>
 <h1 id="时间的测量和计时："><a href="#时间的测量和计时：" class="headerlink" title="时间的测量和计时："></a>时间的测量和计时：</h1><p><a target="_blank" rel="noopener" href="https://docs.opencv.org/4.0.0/db/de0/group__core__utils.html#gae73f58000611a1af25dd36d496bf4487"><strong>cv.getTickCount</strong></a>函数返回参考事件（如机器开启时刻）到调用此函数的时钟周期数。因此，如果在函数执行之前和之后调用它，则会获得用于执行函数的时钟周期数。</p>
 <p><a target="_blank" rel="noopener" href="https://docs.opencv.org/4.0.0/db/de0/group__core__utils.html#ga705441a9ef01f47acdc55d87fbe5090c"><strong>cv.getTickFrequency</strong></a>函数返回时钟周期的频率，或每秒钟的时钟周期数</p>
@@ -431,6 +443,15 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/opencv/">#opencv</a>
+      
+        <a href="/tags/python/">#python</a>
+      
+    </div>
+  
 </div>
 
 
@@ -439,7 +460,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>opencv</div>
+      <div>opencv库函数</div>
       <div>http://example.com/2022/08/15/page/</div>
     </div>
     <div class="license-meta">
@@ -498,6 +519,34 @@
             </div>
 
             
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.17/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"QwB2lL8cbsfqwruH1HSxXyFp-gzGzoHsz","appKey":"MUgWgpg3O2yDJMdJu8nWsXub","path":"window.location.page","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {
+            el: "#valine",
+            path: window.location.page
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
           </article>
         </div>
       </div>
@@ -505,16 +554,6 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
 
     </div>
   </div>
