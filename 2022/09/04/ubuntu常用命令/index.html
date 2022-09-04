@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s1.ax1x.com/2022/08/28/vW8bOf.jpg">
+  <link rel="icon" href="https://s1.ax1x.com/2022/08/28/vW8bOf.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="little yu">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="目录1.软件安装与卸载1.1 下载12apt-get installCopy  1.1.1 更新源12sudo apt-get updateCopy  1.1.2 安装包12sudo apt-get install packageCopy  1.1.3 删除包12sudo apt-get remove packageCopy  1.1.4 搜索软件包12sudo apt-cache search">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu常用命令">
+<meta property="og:url" content="http://example.com/2022/09/04/ubuntu%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="未来">
+<meta property="og:description" content="目录1.软件安装与卸载1.1 下载12apt-get installCopy  1.1.1 更新源12sudo apt-get updateCopy  1.1.2 安装包12sudo apt-get install packageCopy  1.1.3 删除包12sudo apt-get remove packageCopy  1.1.4 搜索软件包12sudo apt-cache search">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-04T08:29:32.000Z">
+<meta property="article:modified_time" content="2022-09-04T08:31:33.618Z">
+<meta property="article:author" content="little yu">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>ubuntu常用命令 - 未来</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/macpanel.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"QwB2lL8cbsfqwruH1HSxXyFp-gzGzoHsz","app_key":"MUgWgpg3O2yDJMdJu8nWsXub","server_url":"https://qwb2ll8c.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Manxingyu&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/xiangce/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/talking/">
+                <i class="iconfont icon-wechat2-fill"></i>
+                胡言乱语
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('http://rheubjsha.hn-bkt.clouddn.com/blog/blog7ec5de7632cf4f45e8d287d41bcb67cd.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ubuntu常用命令"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-04 16:29" pubdate>
+          2022年9月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">ubuntu常用命令</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="1-软件安装与卸载"><a href="#1-软件安装与卸载" class="headerlink" title="1.软件安装与卸载"></a>1.软件安装与卸载</h2><h3 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">apt-<span class="hljs-keyword">get</span> install<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-1-更新源"><a href="#1-1-1-更新源" class="headerlink" title="1.1.1 更新源"></a>1.1.1 更新源</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">sudo apt<span class="hljs-operator">-</span><span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-2-安装包"><a href="#1-1-2-安装包" class="headerlink" title="1.1.2 安装包"></a>1.1.2 安装包</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">sudo apt-<span class="hljs-keyword">get</span> install <span class="hljs-keyword">package</span><br><span class="hljs-title class_">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-3-删除包"><a href="#1-1-3-删除包" class="headerlink" title="1.1.3 删除包"></a>1.1.3 删除包</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> <span class="hljs-built_in">remove</span> package<br>Copy<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-4-搜索软件包"><a href="#1-1-4-搜索软件包" class="headerlink" title="1.1.4 搜索软件包"></a>1.1.4 搜索软件包</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">sudo apt-cache search <span class="hljs-keyword">package</span><br><span class="hljs-title">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-5-获取包信息"><a href="#1-1-5-获取包信息" class="headerlink" title="1.1.5 获取包信息"></a>1.1.5 获取包信息</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">sudo apt-cache show <span class="hljs-keyword">package</span><br><span class="hljs-title">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-6-重新安装包"><a href="#1-1-6-重新安装包" class="headerlink" title="1.1.6 重新安装包"></a>1.1.6 重新安装包</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">sudo apt<span class="hljs-operator">-</span><span class="hljs-keyword">get</span> install package <span class="hljs-comment">--reinstall</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-7-修复安装"><a href="#1-1-7-修复安装" class="headerlink" title="1.1.7 修复安装"></a>1.1.7 修复安装</h4><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo apt-<span class="hljs-keyword">get</span> -f install<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-8-删除包（包括配置文件等）"><a href="#1-1-8-删除包（包括配置文件等）" class="headerlink" title="1.1.8 删除包（包括配置文件等）"></a>1.1.8 删除包（包括配置文件等）</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> <span class="hljs-built_in">remove</span> package --purge<br>Copy<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-9-安装相关的编译环境"><a href="#1-1-9-安装相关的编译环境" class="headerlink" title="1.1.9 安装相关的编译环境"></a>1.1.9 安装相关的编译环境</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">sudo apt-<span class="hljs-keyword">get</span> build-dep <span class="hljs-keyword">package</span><br><span class="hljs-title class_">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-10-更新已安装的包"><a href="#1-1-10-更新已安装的包" class="headerlink" title="1.1.10 更新已安装的包"></a>1.1.10 更新已安装的包</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span><span class="hljs-built_in"> upgrade</span><br><span class="hljs-built_in"></span>Copy<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-11-升级系统"><a href="#1-1-11-升级系统" class="headerlink" title="1.1.11 升级系统"></a>1.1.11 升级系统</h4><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo apt-<span class="hljs-keyword">get</span> dist-upgrade<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-12-了解使用改包依赖哪些包"><a href="#1-1-12-了解使用改包依赖哪些包" class="headerlink" title="1.1.12 了解使用改包依赖哪些包"></a>1.1.12 了解使用改包依赖哪些包</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">sudo apt-cache depends <span class="hljs-keyword">package</span><br><span class="hljs-title">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-13-查看该包被哪些包依赖"><a href="#1-1-13-查看该包被哪些包依赖" class="headerlink" title="1.1.13 查看该包被哪些包依赖"></a>1.1.13 查看该包被哪些包依赖</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">sudo apt-cache rdepends <span class="hljs-keyword">package</span><br><span class="hljs-title">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-14-下载该包的源代码"><a href="#1-1-14-下载该包的源代码" class="headerlink" title="1.1.14 下载该包的源代码"></a>1.1.14 下载该包的源代码</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle">sudo apt-get <span class="hljs-keyword">source</span> <span class="hljs-keyword">package</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-15-清理无用的包"><a href="#1-1-15-清理无用的包" class="headerlink" title="1.1.15 清理无用的包"></a>1.1.15 清理无用的包</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">sudo apt-<span class="hljs-keyword">get</span> clean <span class="hljs-comment">//清理所有软件缓存</span><br>sudo apt-<span class="hljs-keyword">get</span> autoclean <span class="hljs-comment">//清理旧版本的软件缓存</span><br>Copy<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-1-16-检查是否有损坏的依赖"><a href="#1-1-16-检查是否有损坏的依赖" class="headerlink" title="1.1.16 检查是否有损坏的依赖"></a>1.1.16 检查是否有损坏的依赖</h4><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs smali">sudo apt-get<span class="hljs-built_in"> check</span><br><span class="hljs-built_in"></span>Copy<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-Linux下使用git"><a href="#2-Linux下使用git" class="headerlink" title="2.Linux下使用git"></a>2.Linux下使用git</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo apt-<span class="hljs-keyword">get</span> install git<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2-配置"><a href="#2-2-配置" class="headerlink" title="2.2 配置"></a>2.2 配置</h3><h4 id="2-2-1-配置用户名"><a href="#2-2-1-配置用户名" class="headerlink" title="2.2.1 配置用户名"></a>2.2.1 配置用户名</h4><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">git config --global <span class="hljs-keyword">user</span>.name <span class="hljs-string">&quot;git注册用户名&quot;</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-2-2-配置邮箱"><a href="#2-2-2-配置邮箱" class="headerlink" title="2.2.2 配置邮箱"></a>2.2.2 配置邮箱</h4><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">git config --global <span class="hljs-keyword">user</span>.email <span class="hljs-string">&quot;git注册邮箱&quot;</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-2-3-生成密钥"><a href="#2-2-3-生成密钥" class="headerlink" title="2.2.3. 生成密钥"></a>2.2.3. 生成密钥</h4><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">ssh-keygen -t rsa -C <span class="hljs-string">&quot;git注册邮箱&quot;</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-2-4-GitHub上添加公钥"><a href="#2-2-4-GitHub上添加公钥" class="headerlink" title="2.2.4. GitHub上添加公钥"></a>2.2.4. GitHub上添加公钥</h4><h4 id="2-2-5-验证密钥"><a href="#2-2-5-验证密钥" class="headerlink" title="2.2.5. 验证密钥"></a>2.2.5. 验证密钥</h4><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> -T git<span class="hljs-variable">@github</span>.com<br>Copy<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-2-6-测试"><a href="#2-2-6-测试" class="headerlink" title="2.2.6. 测试"></a>2.2.6. 测试</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">github</span>地址<br>Copy<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-安装-LAMP-服务"><a href="#3-安装-LAMP-服务" class="headerlink" title="3.安装 LAMP 服务"></a>3.安装 LAMP 服务</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo tasksel install lamp-<span class="hljs-keyword">server</span><br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="4-查看USB设备"><a href="#4-查看USB设备" class="headerlink" title="4.查看USB设备"></a>4.查看USB设备</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">lsusb  <span class="hljs-comment">#</span><br>加参数 -v 可以显示USB设备的描述表（descriptors）<br>lsusb -v<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="5-查看网卡状态"><a href="#5-查看网卡状态" class="headerlink" title="5.查看网卡状态"></a>5.查看网卡状态</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">sudo apt-<span class="hljs-keyword">get</span> install ethtool <br>sudo ethtool eth0<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="6-获取CPU序列号或者主板序列号"><a href="#6-获取CPU序列号或者主板序列号" class="headerlink" title="6.获取CPU序列号或者主板序列号"></a>6.获取CPU序列号或者主板序列号</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment">#CPU IDsudo dmidecode -t 4 | grep ID</span><br><span class="hljs-comment">#Serial Number</span><br><span class="hljs-attribute">sudo</span> dmidecode  | grep  Serial<br><span class="hljs-comment">#CPUsudo dmidecode -t 4</span><br><span class="hljs-comment">#BIOS</span><br><span class="hljs-attribute">sudo</span> dmidecode -t <span class="hljs-number">0</span><br><span class="hljs-comment">#主板：</span><br><span class="hljs-attribute">sudo</span> dmidecode -t <span class="hljs-number">2</span><br><span class="hljs-comment">#OEM:</span><br><span class="hljs-attribute">sudo</span> dmidecode -t <span class="hljs-number">11</span><br><span class="hljs-attribute">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="7-查看已经安装了的包"><a href="#7-查看已经安装了的包" class="headerlink" title="7.查看已经安装了的包"></a>7.查看已经安装了的包</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">dpkg -l<br><span class="hljs-keyword">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="8-根据IP查网卡地址"><a href="#8-根据IP查网卡地址" class="headerlink" title="8.根据IP查网卡地址"></a>8.根据IP查网卡地址</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">arping</span> <span class="hljs-built_in">IP</span>地址<br><span class="hljs-symbol">Copy</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="9-查看当前IP地址"><a href="#9-查看当前IP地址" class="headerlink" title="9.查看当前IP地址"></a>9.查看当前IP地址</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ifconfig</span> eth0 |awk &#x27;/inet/ &#123;split($<span class="hljs-number">2</span>,x,<span class="hljs-string">&quot;:&quot;</span>);print x[<span class="hljs-number">2</span>]&#125;&#x27;<br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Linux%E5%AD%A6%E4%B9%A0/" class="category-chain-item">Linux学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ubuntu常用命令</div>
+      <div>http://example.com/2022/09/04/ubuntu常用命令/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>little yu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月4日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">
+                        <span class="hidden-mobile">linux常用命令</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.17/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"QwB2lL8cbsfqwruH1HSxXyFp-gzGzoHsz","appKey":"MUgWgpg3O2yDJMdJu8nWsXub","path":"window.location.page","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {
+            el: "#valine",
+            path: window.location.page
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+<a target="_blank" rel="noopener" href="https://github.com/manxingyu/manxingyu.github.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/manxingyu/manxingyu.github.io?label=github&logo=github" srcset="/img/loading.gif" lazyload></a>
+  
+    <div class="footer-content">
+       <span id="runtime_span"></span> <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("8/16/2022 00:00:00");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="这个小破站已负重前进"+A+"天"+B+"小时"+C+"分"+D+"秒了"}show_runtime();</script> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证123456号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备12345678号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
