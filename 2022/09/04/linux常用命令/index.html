@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://rheubjsha.hn-bkt.clouddn.com/blog/7e21e7b0044342c9bab336a4bc7557a4.jpg">
 <meta property="article:published_time" content="2022-09-04T08:04:38.000Z">
-<meta property="article:modified_time" content="2022-09-04T08:31:35.950Z">
+<meta property="article:modified_time" content="2022-09-06T10:03:24.738Z">
 <meta property="article:author" content="little yu">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -108,13 +108,13 @@
 <meta name="generator" content="Hexo 6.2.0"></head>
 
 
-<body>
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 80vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -249,7 +249,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('http://rheubjsha.hn-bkt.clouddn.com/blog/blog7ec5de7632cf4f45e8d287d41bcb67cd.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('http://rheubjsha.hn-bkt.clouddn.com/blog/wallhaven-dpm5ll.jfif') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -311,6 +311,10 @@
       </div>
 
       
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
 </div>
@@ -355,40 +359,40 @@
 <li>关机</li>
 </ol>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">shutdown -h -now <span class="hljs-regexp">//</span>立刻关机<br>shoutdown -h <span class="hljs-number">5</span> <span class="hljs-regexp">//</span><span class="hljs-number">5</span>分钟后关机<br>poweroff <span class="hljs-regexp">//</span>立刻关机<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs copy">shutdown -h -now //立刻关机<br>shoutdown -h 5 //5分钟后关机<br>poweroff //立刻关机<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
 <li>重启</li>
 </ol>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">shutdown -r now <span class="hljs-regexp">//</span>立刻重启<br>shutdown -r <span class="hljs-number">5</span> <span class="hljs-regexp">//</span><span class="hljs-number">5</span>分钟后重启<br>reboot <span class="hljs-regexp">//</span>立刻重启<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs copy">shutdown -r now //立刻重启<br>shutdown -r 5 //5分钟后重启<br>reboot //立刻重启<br></code></pre></td></tr></table></figure>
 
 <h3 id="1-2-帮助命令"><a href="#1-2-帮助命令" class="headerlink" title="1.2 帮助命令"></a>1.2 帮助命令</h3><blockquote>
 <ol>
 <li>help命令</li>
 </ol>
 </blockquote>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-keyword">shutdown</span> <span class="hljs-params">--help</span><br>ifconfig <span class="hljs-params">--help</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">shutdown --help<br>ifconfig --help<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
 <li>命令说明书，按键q退出</li>
 </ol>
 </blockquote>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7"><span class="hljs-keyword">man</span> shutdown <br><span class="hljs-keyword">man</span> ifconfig<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">man shutdown <br>man ifconfig<br></code></pre></td></tr></table></figure>
 
-<h2 id="2-目录操作命令"><a href="#2-目录操作命令" class="headerlink" title="2.目录操作命令"></a>2.目录操作命令</h2><h3 id="2-1-目录切换"><a href="#2-1-目录切换" class="headerlink" title="2.1 目录切换"></a>2.1 目录切换</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-keyword">cd</span> /            <span class="hljs-string">//</span> 切换到根目录<br><span class="hljs-keyword">cd</span> <span class="hljs-string">/usr</span>         <span class="hljs-string">//</span> 切换到根目录下的usr目录 <br><span class="hljs-keyword">cd</span> <span class="hljs-string">../</span> 或者 <span class="hljs-keyword">cd</span> <span class="hljs-string">..</span>   <span class="hljs-string">//</span> 切换到上一级目录 或者<br><span class="hljs-keyword">cd</span> ~						<span class="hljs-string">//</span> 切换到home目录<br><span class="hljs-keyword">cd</span> - 						<span class="hljs-string">//</span> 切换到上次访问的目录<br></code></pre></td></tr></table></figure>
+<h2 id="2-目录操作命令"><a href="#2-目录操作命令" class="headerlink" title="2.目录操作命令"></a>2.目录操作命令</h2><h3 id="2-1-目录切换"><a href="#2-1-目录切换" class="headerlink" title="2.1 目录切换"></a>2.1 目录切换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs copy">cd /            // 切换到根目录<br>cd /usr         // 切换到根目录下的usr目录 <br>cd ../ 或者 cd ..   // 切换到上一级目录 或者<br>cd ~						// 切换到home目录<br>cd - 						// 切换到上次访问的目录<br></code></pre></td></tr></table></figure>
 
 <h3 id="2-2-目录查看"><a href="#2-2-目录查看" class="headerlink" title="2.2 目录查看"></a>2.2 目录查看</h3><p>命令：ls [-al]</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-keyword">ls</span>							<span class="hljs-string">//</span> 查看当前目录下的所有目录和文件<br><span class="hljs-keyword">ls</span> -a						<span class="hljs-string">//</span> 查看当前目录下的所有目录和文件（包括隐藏文件）<br><span class="hljs-keyword">ls</span> -l 或 ll		 <span class="hljs-string">//</span> 列表查看当前目录下的所有目录和文件（列表查看显示更多信息）<br><span class="hljs-keyword">ls</span> /目录名       <span class="hljs-string">//</span> 查看指定目录下的所有目录和文件<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs copy">ls							// 查看当前目录下的所有目录和文件<br>ls -a						// 查看当前目录下的所有目录和文件（包括隐藏文件）<br>ls -l 或 ll		 // 列表查看当前目录下的所有目录和文件（列表查看显示更多信息）<br>ls /目录名       // 查看指定目录下的所有目录和文件<br></code></pre></td></tr></table></figure>
 
 <h3 id="2-3-目录操作（增、删、改、查）"><a href="#2-3-目录操作（增、删、改、查）" class="headerlink" title="2.3 目录操作（增、删、改、查）"></a>2.3 目录操作（增、删、改、查）</h3><blockquote>
 <ol>
 <li>增。创建目录（mkdir）</li>
 </ol>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">mkdir aaa     <span class="hljs-regexp">//</span> 在当前目录下创建一个名为 aaa 的目录<br>mkdir <span class="hljs-regexp">/usr/</span>aaa    <span class="hljs-regexp">//</span> 在指定目录下创建一个名为 aaa 的目录<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">mkdir aaa     // 在当前目录下创建一个名为 aaa 的目录<br>mkdir /usr/aaa    // 在指定目录下创建一个名为 aaa 的目录<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
@@ -398,17 +402,17 @@
 <ul>
 <li>删除文件</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">rm 文件						<span class="hljs-regexp">//</span> 删除当前目录下的指定文件<br>rm -f 文件			  <span class="hljs-regexp">//</span> 删除当前目录下的文件（不会提示）<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">rm 文件						// 删除当前目录下的指定文件<br>rm -f 文件			  // 删除当前目录下的文件（不会提示）<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>删除目录</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">rm -r aaa         <span class="hljs-regexp">//</span> 递归删除当前目录下的 aaa 目录<br>rm -rf aaa        <span class="hljs-regexp">//</span> 递归删除当前目录下的 aaa 目录（不会提示）<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">rm -r aaa         // 递归删除当前目录下的 aaa 目录<br>rm -rf aaa        // 递归删除当前目录下的 aaa 目录（不会提示）<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>全部删除</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">rm -rf *            <span class="hljs-regexp">//</span> 将当前目录下的所有目录和文件全部删除<br>rm -rf <span class="hljs-regexp">/*           /</span><span class="hljs-regexp">/ 将根目录下的所有文件全部删除（自杀命令）</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">rm -rf *            // 将当前目录下的所有目录和文件全部删除<br>rm -rf /*           // 将根目录下的所有文件全部删除（自杀命令）<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
@@ -418,45 +422,45 @@
 <ul>
 <li>重命令目录</li>
 </ul>
-<figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cos"><span class="hljs-keyword">mv</span> 当前目录 新目录<br><span class="hljs-keyword">mv</span> aaa bbb      <span class="hljs-comment">// 将目录 aaa 改为 bbb</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">mv 当前目录 新目录<br>mv aaa bbb      // 将目录 aaa 改为 bbb<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>剪切目录</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">mv 目录名称 目录新位置<br>mv <span class="hljs-regexp">/usr/</span>tmp<span class="hljs-regexp">/aaa /u</span>sr   <span class="hljs-regexp">//</span>  将<span class="hljs-regexp">/usr/</span>tmp目录下的aaa目录剪切到 /usr目录下面<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">mv 目录名称 目录新位置<br>mv /usr/tmp/aaa /usr   //  将/usr/tmp目录下的aaa目录剪切到 /usr目录下面<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>拷贝目录</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">cp -r 目录名称 目录拷贝的目标位置          <span class="hljs-regexp">//</span> -r代表递归<br>cp <span class="hljs-regexp">/usr/</span>tmp<span class="hljs-regexp">/aaa  /u</span>sr           <span class="hljs-regexp">//</span>将<span class="hljs-regexp">/usr/</span>tmp目录下的aaa目录复制到 /usr目录下面<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">cp -r 目录名称 目录拷贝的目标位置          // -r代表递归<br>cp /usr/tmp/aaa  /usr           //将/usr/tmp目录下的aaa目录复制到 /usr目录下面<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
 <li>查。搜索目录</li>
 </ol>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">find 目录 参数 文件名称<br>find <span class="hljs-regexp">/usr/</span>tmp -name <span class="hljs-string">&#x27;a*&#x27;</span>        <span class="hljs-regexp">//</span> 查找<span class="hljs-regexp">/usr/</span>tmp目录下的所有以a开头的目录或文件<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">find 目录 参数 文件名称<br>find /usr/tmp -name &#x27;a*&#x27;        // 查找/usr/tmp目录下的所有以a开头的目录或文件<br></code></pre></td></tr></table></figure>
 
 <h2 id="3-文件操作命令"><a href="#3-文件操作命令" class="headerlink" title="3.文件操作命令"></a>3.文件操作命令</h2><h3 id="3-1-文件操作（增、删、改、查）"><a href="#3-1-文件操作（增、删、改、查）" class="headerlink" title="3.1 文件操作（增、删、改、查）"></a>3.1 文件操作（增、删、改、查）</h3><blockquote>
 <ol>
 <li>增。新建文件（touch）</li>
 </ol>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">touch</span> 文件名<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">touch 文件名<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
 <li>删。删除文件（rm）</li>
 </ol>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf 文件名<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">rm -rf 文件名<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
 <li>改。修改文件（vi或vim）</li>
 </ol>
 </blockquote>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-selector-tag">vi</span> 或者 <span class="hljs-selector-tag">vim</span> 文件名<br>点击键盘<span class="hljs-selector-tag">i</span>/<span class="hljs-selector-tag">a</span>/<span class="hljs-selector-tag">o</span>进入编辑模式。<br><span class="hljs-selector-tag">i</span>:在光标所在字符前开始插入<br><span class="hljs-selector-tag">a</span>:在光标所在字符后开始插入<br><span class="hljs-selector-tag">o</span>:在光标所在行的下面另起一新行插入<br><br>按「<span class="hljs-selector-tag">ESC</span>」键可回到命令行模式。<br><br><span class="hljs-selector-tag">q</span>：退出编辑<br><span class="hljs-selector-tag">q</span>!：强制退出<br><span class="hljs-selector-tag">wq</span>：保存并退出<br><span class="hljs-selector-tag">wq</span>!：强制保存并退出<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs copy">vi 或者 vim 文件名<br>点击键盘i/a/o进入编辑模式。<br>i:在光标所在字符前开始插入<br>a:在光标所在字符后开始插入<br>o:在光标所在行的下面另起一新行插入<br><br>按「ESC」键可回到命令行模式。<br><br>q：退出编辑<br>q!：强制退出<br>wq：保存并退出<br>wq!：强制保存并退出<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <ol>
@@ -466,22 +470,22 @@
 <ul>
 <li>看最后一屏（cat）</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cat sudo.conf    <span class="hljs-regexp">//</span> 使用cat查看<span class="hljs-regexp">/etc/</span>sudo.conf文件，只能显示最后一屏内容<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">cat sudo.conf    // 使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>百分比显示</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">more sudo.conf   <span class="hljs-regexp">//</span> 使用more查看<span class="hljs-regexp">/etc/</span>sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">more sudo.conf   // 使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>翻页查看</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">less sudo.conf   <span class="hljs-regexp">//</span> 使用less查看<span class="hljs-regexp">/etc/</span>sudo.conf文件，可以使用键盘上的PgUp和PgDn向上    和向下翻页，q结束查看<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">less sudo.conf   // 使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上    和向下翻页，q结束查看<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>指定行数或者动态查看</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">tail -<span class="hljs-number">10</span> sudo.conf   <span class="hljs-regexp">//</span> 使用tail -<span class="hljs-number">10</span> 查看<span class="hljs-regexp">/etc/</span>sudo.conf文件的后<span class="hljs-number">10</span>行，Ctrl+C结束  <br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">tail -10 sudo.conf   // 使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束  <br></code></pre></td></tr></table></figure>
 
 <h3 id="3-2-权限修改"><a href="#3-2-权限修改" class="headerlink" title="3.2 权限修改"></a>3.2 权限修改</h3><p>rwx：r代表可读，w代表可写，x代表该文件是一个可执行文件。<br>总共分为4段，如下：</p>
 <hr>
@@ -554,7 +558,7 @@
 <li>–version : 显示版本</li>
 </ul>
 <p>示例：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">chmod ugo+r file1.txt  <span class="hljs-regexp">//</span> 将文件 file1.txt 设为所有人皆可读取 <br>chmod a+r file1.txt  <span class="hljs-regexp">//</span> 将文件 file1.txt 设为所有人皆可读取 <br>chmod u+x ex1.py   <span class="hljs-regexp">//</span> 为 ex1.py 文件拥有者增加可执行权限<br>chmod -R a+r *    <span class="hljs-regexp">//</span> 将目前目录下的所有文件与子目录皆设为任何人可读取<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs copy">chmod ugo+r file1.txt  // 将文件 file1.txt 设为所有人皆可读取 <br>chmod a+r file1.txt  // 将文件 file1.txt 设为所有人皆可读取 <br>chmod u+x ex1.py   // 为 ex1.py 文件拥有者增加可执行权限<br>chmod -R a+r *    // 将目前目录下的所有文件与子目录皆设为任何人可读取<br></code></pre></td></tr></table></figure>
 
 <h2 id="4-压缩文件操作"><a href="#4-压缩文件操作" class="headerlink" title="4.压缩文件操作"></a>4.压缩文件操作</h2><h3 id="4-1-打包和压缩"><a href="#4-1-打包和压缩" class="headerlink" title="4.1 打包和压缩"></a>4.1 打包和压缩</h3><p>Linux中的打包文件后缀名：aa.tar<br>Linux中的压缩文件后缀名：aa.gz<br>Linux中的打包并压缩的文件后缀名：aa.tar.gz</p>
 <p>命令：<code>tar -zcvf 打包压缩后的文件名 要打包的文件</code></p>
@@ -564,15 +568,15 @@
 <li>v：显示运行过程</li>
 <li>f：指定文件名</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span> 打包并压缩<span class="hljs-regexp">/usr/</span>tmp 下的所有文件 压缩后的压缩包指定名称为xxx.tar<br>tar -zcvf ab.tar aa.txt bb.txt <br>或者 <br>tar -zcvf ab.tar  *   <span class="hljs-regexp">//</span> 当前目录下的所有文件打包<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs copy">// 打包并压缩/usr/tmp 下的所有文件 压缩后的压缩包指定名称为xxx.tar<br>tar -zcvf ab.tar aa.txt bb.txt <br>或者 <br>tar -zcvf ab.tar  *   // 当前目录下的所有文件打包<br></code></pre></td></tr></table></figure>
 
 <h3 id="4-2-解压"><a href="#4-2-解压" class="headerlink" title="4.2 解压"></a>4.2 解压</h3><p>命令：tar [-zxvf] 压缩文件<br>其中x代表解压。解压到当前目录下。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">tar</span> -zxvf ab.tar<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">tar -zxvf ab.tar<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>解压到指定位置。</p>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span> 将<span class="hljs-regexp">/usr/</span>tmp 下的ab.tar解压到根目录/usr下<br>tar -zxvf ab.tar -C <span class="hljs-regexp">/usr      /</span><span class="hljs-regexp">/ C代表指定解压的位置</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">// 将/usr/tmp 下的ab.tar解压到根目录/usr下<br>tar -zxvf ab.tar -C /usr      // C代表指定解压的位置<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -982,7 +986,9 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script>
+  <link defer rel="stylesheet" href="/css/backgroundize.css" />
+  <!-- hexo injector body_end end --></body>
 </html>
 <!--单击显示文字-->
 <script type="text/javascript" src="/js/click_show_text.js"></script>
