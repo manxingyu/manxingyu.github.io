@@ -1,5 +1,5 @@
 var imgDataPath = "/xiangce/photos.json"; //图片名称高宽信息json文件路径   //填入你的路径，注意修改
-var imgPath = "http://rheubjsha.hn-bkt.clouddn.com/img/"; //图片访问路径   //填入你的路径，注意修改
+var imgPath = "http://blog.manxingyu.xyz/img/"; //图片访问路径   //填入你的路径，注意修改
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
